@@ -29,7 +29,7 @@ def Tech_News():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('technology.html', result = result)
 
 
 @app.route("/business")
@@ -52,7 +52,7 @@ def Business_News():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('business.html', result = result)
 
 
 @app.route("/politics")
@@ -75,7 +75,7 @@ def Politic_News():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('politics.html', result = result)
 
 
 @app.route("/sports")
@@ -98,7 +98,7 @@ def sports_News():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('sports.html', result = result)
 
 
 @app.route("/entertainment")
@@ -121,7 +121,7 @@ def Entertainment_news():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('entertainment.html', result = result)
 
 
 @app.route("/health")
@@ -144,7 +144,7 @@ def Health_news():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('health.html', result = result)
 
 
 @app.route("/science")
@@ -167,7 +167,7 @@ def Science_news():
             "link" : data['url'],
             "image" : data['urlToImage']
             })
-    return render_template('new_body.html', result = result)
+    return render_template('science.html', result = result)
 
 
 if __name__ == "__main__":

@@ -59,54 +59,7 @@
               <a href="/science">Science</a>
             </li>
           </ul>
-          <button
-            class="block p-3 mx-10 md:hidden hover:bg-gray-200 rounded-xl group"
-          >
-            <div class="w-5 my-[3px] h-[3px] bg-gray-600 mb-[2px]"></div>
-            <div class="w-5 my-[3px] h-[3px] bg-gray-600 mb-[2px]"></div>
-            <div class="w-5 my-[3px] h-[3px] bg-gray-600"></div>
-            <div
-              class="absolute top-0 -right-full opacity-0 h-screen w-[60%] border bg-white group-focus:right-0 group-focus:opacity-100 transition-all ease-in duration-300"
-            >
-              <ul class="flex flex-col items-center text-[18px] pt-[60px]">
-                <li
-                  class="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1"
-                >
-                  <a href="#">Home</a>
-                </li>
-                <li
-                  class="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1"
-                >
-                  <a href="#">About Us</a>
-                </li>
-                <li
-                  class="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1"
-                >
-                  <a href="#">Our Services</a>
-                </li>
-                <li
-                  class="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1"
-                >
-                  <a href="#">Portfolio</a>
-                </li>
-                <li
-                  class="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1"
-                >
-                  <a href="#">Contact</a>
-                </li>
-                <li
-                  class="text-blue-600 hover:text-white hover:bg-blue-600 mx-4 my-1 border-2 border-blue-600 px-2 rounded-2xl"
-                >
-                  <a href="#">LogIn</a>
-                </li>
-                <li
-                  class="text-white bg-blue-600 px-2 rounded-2xl mx-4 my-1 hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600"
-                >
-                  <a href="#">SignUp</a>
-                </li>
-              </ul>
-            </div>
-          </button>
+          
         </div>
       </div>
     </div>
@@ -124,8 +77,23 @@
 
     <!-- body -->
 
-    {% block body %} {% endblock body %}
-
+    <div class="flex justify-center">
+      <div class="flex flex-col max-w-7xl justify-center items-center">
+          {% for data in result  %}
+          <div class="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+              <div class="h-26 w-full overflow-hidden"> <img src={{data['image']}}
+                      alt="" class="" /> </div>
+              <div class="grid p-2">
+                  <div class="font-bold text-lg text-black m-2 mt-10">{{data['title']}}</div>
+                  <div class="text-black-500 m-2 text-sm">{{data['content']}}</div>
+                  <div class="text-blue-400 m-2 text-sm"><a href="{{data['link']}}">{{data['link']}}</a></div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+      </div>
+  
+      <script src="https://cdn.tailwindcss.com"></script> 
     <!-- end of Body -->
 
     <!-- Footer  -->
