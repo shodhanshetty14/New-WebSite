@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Home
+    Technology
 {% endblock title %}
 
 {% block body %}
@@ -16,7 +16,7 @@
             <div class="grid p-2">
                 <div class="font-bold text-lg text-black m-2 mt-10">{{data['title']}}</div>
                 <div class="text-black-500 m-2 text-sm">{{data['content']}}</div>
-                <div class="text-blue-300 m-2 text-sm"><a href="{{data['link']}}">{{data['link']}}</a></div>
+                <div class="text-blue-400 m-2 text-sm"><a href="{{data['link']}}">{{data['link']}}</a></div>
             </div>
         </div>
         {% endfor %}
