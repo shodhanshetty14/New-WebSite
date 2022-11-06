@@ -1,4 +1,4 @@
-# News-WebSite
+# News-WebSite - https://news-web-shodhan.herokuapp.com/
 API based Flask project
 Requires to install flaskto run it
 you need a API key from "NEWS API" to actually run this.
